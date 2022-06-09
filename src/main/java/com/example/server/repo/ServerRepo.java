@@ -8,6 +8,4 @@ public interface ServerRepo extends JpaRepository<Server, Long> {
     // this is done (interpreted) by JpaRepository automatically
     Server findByIpAddress(String ipAddress);
 
-
-
 }

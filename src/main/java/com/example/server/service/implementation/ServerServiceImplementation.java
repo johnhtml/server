@@ -45,7 +45,7 @@ public class ServerServiceImplementation implements ServerService {
         log.info("Pinging server IP: {}", ipAddress);
         Server server = serverRepo.findByIpAddress(ipAddress);
         InetAddress address = InetAddress.getByName(ipAddress);
-        server.setStatus(address.isReachable(10000) ? Status.SERVER_DOWN: Status.SERVER_DOWN);
+        server.setStatus(address.isReachable(10000) ? Status.SERVER_UP: Status.SERVER_DOWN);
         serverRepo.save(server);
         return server;
     }

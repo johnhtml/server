@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import java.util.concurrent.TimeUnit;
 
 import static java.util.Map.*;
 
@@ -26,7 +27,8 @@ public class ServerResource {
 
 
     @GetMapping("/list")
-    public ResponseEntity<Response> getServers() {
+    public ResponseEntity<Response> getServers() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(1);
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(LocalDateTime.now())
@@ -101,6 +103,6 @@ public class ServerResource {
     @GetMapping(path = "/images/{fileName}", produces = MediaType.IMAGE_PNG_VALUE)
     public byte[] getServerImage(@PathVariable("fileName") String fileName) throws IOException {
         return Files.readAllBytes(Paths.get(System.getProperty("user.home") +
-                "Downloads/images/" + fileName));
+                "/Downloads/images/" + fileName));
     }
 }
