@@ -48,6 +48,17 @@ public class ServerApplication {
                             Status.SERVER_UP
                     )
             );
+            serverRepo.save(
+                    new Server(
+                            null,
+                            "192.168.1.123",
+                            "Fedora LinuxISO",
+                            "64 GB",
+                            "Dell workstation",
+                            "http://",
+                            Status.SERVER_DOWN
+                    )
+            );
         };
     }
 
@@ -60,6 +71,7 @@ public class ServerApplication {
         corsConfiguration.setAllowedHeaders(Arrays.asList(
                 "Origin",
                 "Access-Control-Allow-Origin",
+                "Access-Control-Allow-Credentials",
                 "Content-Type",
                 "Accept",
                 "Jwt-Token",
