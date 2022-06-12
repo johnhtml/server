@@ -12,7 +12,7 @@ contract interfaces, a general view of the model used can be check in the next i
   <img src="https://user-images.githubusercontent.com/50509447/172481220-92dd3f61-6ae4-424d-a835-c5e43abc1a05.png" alt="Sublime's custom image"/>
 </p>
 
-In other hand, the GET, PUT, POST and DELETE requests are connected to the following frontEnd
+In the other hand, the GET, PUT, POST and DELETE requests are connected to the following frontEnd
 Angular user interface. (This Angular code can be found at https://github.com/johnhtml/serverapp)
 
 <p align="center">
