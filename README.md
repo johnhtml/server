@@ -18,3 +18,5 @@ Angular user interface. (This Angular code can be found at https://github.com/jo
 <p align="center">
   <img src="https://user-images.githubusercontent.com/50509447/173255748-db238718-d911-47af-9fbf-db5598954f1e.png" alt="Sublime's custom image"/>
 </p>
+
+Finally, the data is stored in a Mysql database
